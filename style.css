@@ -283,3 +283,37 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* Better small-mobile support for 375px (Mobile M) and 320px (Mobile S) */
+@media (max-width: 375px) {
+    /* :root { } */
+    .container { padding: 12px; max-width: 360px }
+    .hero { padding: 28px 0 }
+    .hero h1 { font-size: 18px }
+    .hero .lead { font-size: 14px }
+    .hero .sub { font-size: 13px }
+    .hero-top { flex-direction: column; align-items: flex-start; gap: 8px }
+    .hero-contacts { width: 100%; display:flex; flex-wrap:wrap; gap:8px }
+    .btn { padding: 8px 10px; gap: 6px; font-size: 14px; border-radius: 10px }
+    .btn.large { padding: 10px 14px }
+    .iconphone { width: 18px; height: 18px }
+    .card { padding: 20px; border-radius: 14px; min-height: auto }
+    .card h3 { font-size: 18px }
+    .tariff .price { font-size: 28px }
+    .price-sub { font-size: 13px }
+    .tariff-cards, .info-cards { gap: 16px }
+    footer { padding: 18px 10px }
+}
+
+@media (max-width: 320px) {
+    .container { padding: 10px; max-width: 300px }
+    .hero { padding: 22px 0 }
+    .hero h1 { font-size: 16px }
+    .hero .lead { font-size: 13px }
+    .btn { padding: 6px 8px; font-size: 13px }
+    .iconphone { width: 16px; height: 16px }
+    .card { padding: 16px; border-radius: 12px }
+    .tariff .price { font-size: 22px }
+    .card h3 { font-size: 16px }
+    .hero-top { align-items: flex-start }
+}

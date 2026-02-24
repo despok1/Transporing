@@ -285,7 +285,7 @@ footer {
 }
 
 /* Better small-mobile support for 375px (Mobile M) and 320px (Mobile S) */
-@media (max-width: 375px) {
+@media (max-width: 420px) {
     /* :root { } */
     .container { padding: 12px; max-width: 360px }
     .hero { padding: 28px 0 }

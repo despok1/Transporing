@@ -1,0 +1,285 @@
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%
+}
+
+:root{
+    --accent: #E65A00; /* slightly darker accent */
+    --heading: #0F1724; /* deeper heading */
+    --text: #374151; /* darker main text */
+    --muted: #4B5563; /* secondary muted */
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #E9EEF3; /* darker overall background */
+    color: var(--text);
+    line-height: 1.5
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px
+}
+
+.hero {
+    position: relative;
+    background-image: url('/assets/img/van.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 56px 0
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.6));
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2
+}
+
+.hero-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 30px
+}
+
+.hero .lead {
+    margin: 14px 0 6px;
+    font-weight: 600
+}
+
+.hero .sub {
+    margin: 0 0 6px
+}
+
+.hero-contacts {
+    display: flex;
+    gap: 8px
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.482);
+    transition: background .16s ease, border-color .16s ease, transform .12s ease, box-shadow .16s ease;
+}
+
+.btn.alt {
+    background: rgba(0, 136, 204, 0.12)
+}
+
+.btn.large {
+    display: inline-block;
+    padding: 12px 18px;
+    background: #006aff;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none
+}
+
+/* Primary accent button */
+.btn.primary {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+}
+
+/* Hover / focus for buttons */
+.btn:hover{
+    background: rgba(255,255,255,0.18);
+    border-color: rgba(255,255,255,0.22);
+    transform: translateY(-1px);
+}
+
+.btn:focus{
+    outline: none;
+}
+
+.btn.primary:hover{
+    filter:brightness(0.94);
+    box-shadow: 0 8px 26px rgba(230,90,0,0.16);
+    transform: translateY(-2px);
+}
+
+.btn.primary:focus{
+    box-shadow: 0 0 0 4px rgba(230,90,0,0.12);
+}
+
+main.single {
+    background: #fff;
+    border-radius: 10px;
+    margin: 18px auto;
+    padding: 20px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06)
+}
+
+section {
+    margin-bottom: 18px
+}
+
+h2 {
+    color: var(--heading);
+    margin: 0 0 8px
+}
+
+.prices {
+    font-weight: 700
+}
+
+ul {
+    padding-left: 20px
+}
+
+footer {
+    color: #666;
+    text-align: center;
+    padding: 24px 20px
+}
+.iconphone {
+  width: 25px;
+  height: 25px;
+    vertical-align: middle;
+  
+}
+@media(max-width:600px) {
+    .hero h1 {
+        font-size: 22px
+    }
+
+    .hero-top {
+        flex-direction: column;
+        align-items: flex-start
+    }
+
+    .hero-contacts {
+        margin-top: 10px
+    }
+}
+
+/* Muted section + card styles for tariffs and info */
+.muted-section {
+    background: #E7EAEE;
+    padding: 36px 0;
+}
+
+.tariff-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    margin-bottom: 28px;
+}
+
+.info-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+}
+
+.card {
+    background: #F5F7F8;
+    border-radius: 18px;
+    padding: 32px;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.07);
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card h3 {
+    margin: 0 0 12px 0;
+    color: var(--heading);
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.tariff {
+    border: 2px solid #FFD1A6;
+}
+
+.tariff .price {
+    font-size: 36px;
+    font-weight: 700;
+    margin: 6px 0;
+    color: var(--accent);
+}
+
+.price-sub {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.tariff.featured {
+    background: linear-gradient(180deg, #FFF3EA, #FFFFFF);
+}
+
+/* Responsive & typography tweaks */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.tariff .price {
+    font-size: 54px;
+    font-weight: 700;
+    margin: 6px 0;
+    color: var(--accent);
+    line-height: 1;
+}
+
+@media (max-width: 1100px) {
+    .container { padding: 20px }
+    .tariff .price { font-size: 44px }
+}
+
+@media (max-width: 800px) {
+    .tariff-cards,
+    .info-cards {
+        grid-template-columns: 1fr;
+    }
+    .tariff .price { font-size: 36px }
+    .hero { padding: 40px 0 }
+}
+
+@media (max-width: 480px) {
+    .container { padding: 16px }
+    .tariff .price { font-size: 26px }
+    .iconphone { width: 20px; height: 20px }
+    .hero h1 { font-size: 20px }
+}
+
+.btn.primary {
+    background: var(--accent);
+    color: #fff;
+}
+
+@media (max-width: 800px) {
+    .tariff-cards,
+    .info-cards {
+        grid-template-columns: 1fr;
+    }
+}
